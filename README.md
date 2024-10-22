@@ -77,8 +77,19 @@ kubectl apply -f namespace-configmaps-export.yaml
 # 3. Apply all deployments, services, and other resources
 kubectl apply -f namespace-export.yaml
 ```
+### 4. Run an experiment manually
 
-### 4. Access Services
+A cron Job is setup to run model training everyday, but it can also be executed manually by following job creation.
+
+```bash
+# Manual job to test model generation and logging 
+kubectl create job --from=cronjob/ml-model-training ml-model-training-test -n=virtual-mind-task
+
+# Delete the job
+kubectl delete jobs ml-model-training-test -n=virtual-mind-task
+```
+
+### 5. Access Services
 
 Access the deployed services using Minikube service command:
 
