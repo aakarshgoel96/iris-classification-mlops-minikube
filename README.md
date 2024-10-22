@@ -23,7 +23,7 @@ This repository implements a complete ML model lifecycle with automated training
 
 ## System Architecture
 
-![System Architecture](images/Components_Diagram.png)
+![System Architecture](images/Components_Diagram.PNG)
 
 The above diagram shows the overall system architecture including the interaction between different components.
 ## Deployment Instructions
